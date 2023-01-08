@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        android:background="@drawable/rounded_corner"
+        android:id="@+id/input_fields">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_home_24"
+            android:id="@+id/link_icon"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/clear_icon"
+            android:layout_toEndOf="@id/link_icon"
+            android:background="@null"
+            android:hint="Search or Type URL"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/url_input"
+            android:inputType="textUri"
+            android:imeOptions="actionGo"
+            android:singleLine="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:id="@+id/clear_icon"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E1E1E1"
+            android:layout_below="@id/input_fields"
+            android:id="@+id/divider_1" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_below="@id/input_fields"
+            android:visibility="invisible" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/asar"
+            android:textSize="18dp"
+            android:text="Search engines">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/goo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/google">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/yahoo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/yaho">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/duckduck"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/duck">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/bing"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="210dp"
+                android:src="@drawable/bing">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/ask"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="270dp"
+                android:src="@drawable/ask">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/asar"
+            android:textSize="18dp"
+            android:text="Educational Sites">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="150dp"
+
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/geek"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/geek"/>
+            <ImageView
+                android:id="@+id/kali"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="70dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/kali"/>
+            <ImageView
+                android:id="@+id/lib"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/libgen">
+
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/leet"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/leet"/>
+            <ImageView
+                android:id="@+id/bash"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/bach">
+
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/z"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/javalogo">
+
+
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/rank"
+
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/rank">
+
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/stack"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/stack"/>
+            <ImageView
+                android:id="@+id/c"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="160dp"
+                android:src="@drawable/c">
+
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/nptl"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/nptl">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/medium"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/medium">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/python"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/python">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/hack"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/hack">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/github"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/git">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/javalogo"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/java">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/cpp"
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/cc">
+
+            </ImageView>
+
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/asar"
+            android:textSize="18dp"
+            android:text="Entertainment Sites">
+        </TextView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="380dp"
+
+            android:layout_height="190dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/d">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/movies">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/quora">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/hd">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/insta">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/reddit">
+
+            </ImageView>
+
+
+
+
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/prime">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/face">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/amazon">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="230dp"
+                android:src="@drawable/net">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="230dp"
+                android:src="@drawable/whatsapp">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="230dp"
+                android:src="@drawable/zomato">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/bros">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/tweet">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/swiggy">
+
+            </ImageView>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
